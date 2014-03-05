@@ -19,12 +19,13 @@ namespace LoginDataAccess
 
         #endregion
 
+        #region Constructor
         public UserDataDAL()
         {
             conn = new SqlConnection();
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["mydbconn"].ToString();
         }
-
+        #endregion
 
         #region Methods
 
