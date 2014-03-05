@@ -14,6 +14,7 @@ public partial class CheckUserData : System.Web.UI.Page
     UserData userData;
     #endregion
 
+    #region Page Methods
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -42,4 +43,5 @@ public partial class CheckUserData : System.Web.UI.Page
             }
         }
     }
+    #endregion
 }

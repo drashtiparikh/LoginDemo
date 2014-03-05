@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 
 public partial class ErrorPage : System.Web.UI.Page
 {
+
+    #region Page Methods
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -15,4 +17,5 @@ public partial class ErrorPage : System.Web.UI.Page
             lblMsgtext.CssClass = "errorText";
         }
     }
+    #endregion
 }

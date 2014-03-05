@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class MasterPage : System.Web.UI.MasterPage
 {
+    #region Page Methods
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -23,4 +24,5 @@ public partial class MasterPage : System.Web.UI.MasterPage
         Session.Abandon();
         Response.Redirect("Login.aspx");
     }
+    #endregion
 }

@@ -14,7 +14,6 @@ namespace LoginBusiness
         UserDataDAL userDataDAL;
         #endregion
 
-
         #region Methods
 
         public bool insertUserData(UserData userData)
