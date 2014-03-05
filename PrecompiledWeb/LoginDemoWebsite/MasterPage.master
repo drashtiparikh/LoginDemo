@@ -1,0 +1,33 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="MasterPage, App_Web_masterpage.master.cdcab7d2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="page">
+        <div class="header">
+        </div>
+        <div class="title">
+            <h1>
+                Demo Application
+            </h1>
+            <% if (Session["id"] != null && Convert.ToString(Session["id"]) != string.Empty)
+               { %>
+            <span style="float: right;">
+                <asp:Label ID="lblWelcome" runat="server"> welcome, <%= Convert.ToString(Session["firstname"])  %></asp:Label>
+                <asp:LinkButton ID="lnkLogOut" runat="server" onclick="lnkLogOut_Click">Log out</asp:LinkButton></span>
+            <% } %>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
